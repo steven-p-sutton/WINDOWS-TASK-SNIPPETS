@@ -3,7 +3,48 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WINDOWS-TASK-SNIPPETS", "WINDOWS-TASK-SNIPPETS\WINDOWS-TASK-SNIPPETS.csproj", "{CF6473A9-2D69-4DB0-A0D0-3E953323DED4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WINDOWS-TASK-SNIPPETS", "WINDOWS-TASK-SNIPPETS\WINDOWS-TASK-SNIPPETS.csproj", "{CF6473A9-2D69-4DB0-A0D0-3E953323DED4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A0CABC12-A827-49CC-B1AA-5776501925AF}"
+	ProjectSection(SolutionItems) = preProject
+		CONTRIBUTING.md = CONTRIBUTING.md
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tasks", "tasks", "{2F808003-7A0E-4C42-925D-DB1690CA9169}"
+	ProjectSection(SolutionItems) = preProject
+		tasks\App-version-and-title.md = tasks\App-version-and-title.md
+		tasks\Bing-image-of-the-day-URI.md = tasks\Bing-image-of-the-day-URI.md
+		tasks\Cancelling-a-task-after-a-delay.md = tasks\Cancelling-a-task-after-a-delay.md
+		tasks\Capture-an-image.md = tasks\Capture-an-image.md
+		tasks\Clipboard-text.md = tasks\Clipboard-text.md
+		tasks\Color-names-and-contrasting-foregrounds.md = tasks\Color-names-and-contrasting-foregrounds.md
+		tasks\Color-names-and-contrasting-foregrounds.png = tasks\Color-names-and-contrasting-foregrounds.png
+		tasks\Colors-as-a-collection.md = tasks\Colors-as-a-collection.md
+		tasks\Convert-DPI-rectangles.md = tasks\Convert-DPI-rectangles.md
+		tasks\Convert-hex-to-color.md = tasks\Convert-hex-to-color.md
+		tasks\Convert-RGB-to-HSV.md = tasks\Convert-RGB-to-HSV.md
+		tasks\Data-binding-change-notification.md = tasks\Data-binding-change-notification.md
+		tasks\File-exists.md = tasks\File-exists.md
+		tasks\Folder-access-preservation.md = tasks\Folder-access-preservation.md
+		tasks\InkCanvas-data-binding.md = tasks\InkCanvas-data-binding.md
+		tasks\Launch-executable.md = tasks\Launch-executable.md
+		tasks\Location-of-device.md = tasks\Location-of-device.md
+		tasks\Media-file-concatenation.md = tasks\Media-file-concatenation.md
+		tasks\Play-sound-once-or-looped.md = tasks\Play-sound-once-or-looped.md
+		tasks\Show-dialog-box.md = tasks\Show-dialog-box.md
+		tasks\Socket-programming-with-TCP.md = tasks\Socket-programming-with-TCP.md
+		tasks\Socket-programming-with-UDP.md = tasks\Socket-programming-with-UDP.md
+		tasks\Store-app-rating-pop-up.md = tasks\Store-app-rating-pop-up.md
+		tasks\Thread-switching-within-a-task.md = tasks\Thread-switching-within-a-task.md
+		tasks\Time-specific-salutation.md = tasks\Time-specific-salutation.md
+		tasks\UI-thread-access-from-background-thread.md = tasks\UI-thread-access-from-background-thread.md
+		tasks\UI-thread-task-await-from-background-thread.md = tasks\UI-thread-task-await-from-background-thread.md
+		tasks\UI-update-after-delay.md = tasks\UI-update-after-delay.md
+		tasks\UI-updates-with-a-timer.md = tasks\UI-updates-with-a-timer.md
+		tasks\User-info.md = tasks\User-info.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
