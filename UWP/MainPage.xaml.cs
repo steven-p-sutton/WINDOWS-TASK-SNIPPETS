@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using WindowsTaskSnippets; // LIBRARY project
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -26,6 +27,10 @@ namespace UWP
         public MainPage()
         {
             this.InitializeComponent();
+            string name = AppVersionAndTitle.AppName;
+            string version = AppVersionAndTitle.AppVersion;
         }
     }
+
+   
 }
