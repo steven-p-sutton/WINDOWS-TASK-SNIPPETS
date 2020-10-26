@@ -8,7 +8,16 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
+    <Grid Background="Transparent">
+        <Button x:Name="button" 
+                IsEnabled="True" 
+                Visibility="Visible" 
+                Content="App Version And Title" 
+                HorizontalAlignment="Left" 
+                Margin="120,98,0,510" 
+                VerticalAlignment="Stretch" 
+                Click="Button_Click" 
+                Height="34" 
+                Width="132"/>
     </Grid>
 </Page>
