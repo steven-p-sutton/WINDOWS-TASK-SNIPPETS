@@ -1,4 +1,7 @@
-﻿using Windows.ApplicationModel;
+﻿using Windows.ApplicationModel; // UWP only - tbc
+
+// [Package class](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.package.aspx)  
+// [Interpolated strings] (https://msdn.microsoft.com/library/dn961160.aspx) (strings with a $ prefix) 
 
 namespace WindowsTaskSnippets
 {
