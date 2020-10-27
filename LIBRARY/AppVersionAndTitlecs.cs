@@ -3,7 +3,7 @@
 // [Package class](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.package.aspx)  
 // [Interpolated strings] (https://msdn.microsoft.com/library/dn961160.aspx) (strings with a $ prefix) 
 
-namespace WindowsTaskSnippets
+namespace WindowsTaskSnippets.AppVersionAndTitle
 {
    public static class AppVersionAndTitle
     {

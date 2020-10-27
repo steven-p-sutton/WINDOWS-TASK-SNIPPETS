@@ -121,6 +121,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AppVersionAndTitlecs.cs" />
+    <Compile Include="MessageDialogHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\LIBRARY.rd.xml" />
   </ItemGroup>
