@@ -34,15 +34,21 @@ namespace UWP
 
         public async void Button_Click(object sender, RoutedEventArgs e)
         {
-            string s1 = String.Format("\t{0,12} = {1,-50}\n", "AppName", AppVersionAndTitle.AppName);
-            string s2 = String.Format("\t{0,12} = {1,-12}\n", "AppVersion", AppVersionAndTitle.AppVersion);
+            // String Format https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=netcore-3.1
 
-            await displayMessageAsync("App Version And Title", s1+s2, string.Empty);
+            // Required more fiddling to get columns to align
+            string h0 = String.Format("{0,-25}   {1,-50}\n", "Field", "Value");
+            string r1 = String.Format("{0,-25} = {1,-50}\n", "AppName", AppVersionAndTitle.AppName);
+            string r2 = String.Format("{0,-25} = {1,-50}\n", "AppVersion", AppVersionAndTitle.AppVersion);
+
+            await displayMessageAsync("App Version And Title", h0 + r1 + r2, string.Empty);
         }
 
         //Stackoverflow Exampe of Dialog Box
         public async Task displayMessageAsync(String title, String content, String dialogType)
         {
+
+            // Dialog Boxes  https://prod.liveshare.vsengsaas.visualstudio.com/join?F2151E126AE030174AC02156F688EF381B3B
             var messageDialog = new MessageDialog(content, title);
             if (dialogType == "notification")
             {
@@ -50,29 +56,29 @@ namespace UWP
             }
             else
             {
-                //Dipplay questions-Yes or No- MessageDialog
+                //Display questions-Yes or No- MessageDialog
                 //messageDialog.Commands.Add(new UICommand("Yes", null));
                 //messageDialog.Commands.Add(new UICommand("No", null));
                 messageDialog.Commands.Add(new UICommand("OK", null));
                 messageDialog.DefaultCommandIndex = 0;
-            }
 
-            messageDialog.CancelCommandIndex = 1;
-            var cmdResult = await messageDialog.ShowAsync();
+                messageDialog.CancelCommandIndex = 1;
+                var cmdResult = await messageDialog.ShowAsync();
 
-            Debug.WriteLine("My Dialog answer label is:: " + cmdResult.Label);
+                Debug.WriteLine("My Dialog answer label is:: " + cmdResult.Label);
 
-            if (cmdResult.Label == "Yes")
-            {
-                Debug.WriteLine("My Dialog answer label is:: " + cmdResult.Label);
-            }
-            else if (cmdResult.Label == "No")
-            {
-                Debug.WriteLine("My Dialog answer label is:: " + cmdResult.Label);
-            }
-            else
-            {
-                Debug.WriteLine("My Dialog answer label is:: " + cmdResult.Label);
+                if (cmdResult.Label == "Yes")
+                {
+                    Debug.WriteLine("My Dialog answer label is:: " + cmdResult.Label);
+                }
+                else if (cmdResult.Label == "No")
+                {
+                    Debug.WriteLine("My Dialog answer label is:: " + cmdResult.Label);
+                }
+                else
+                {
+                    Debug.WriteLine("My Dialog answer label is:: " + cmdResult.Label);
+                }
             }
         }
     }
