@@ -8,6 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+<!--
     <Grid Background="Transparent">
         <Button x:Name="button" 
                 IsEnabled="True" 
@@ -20,4 +21,43 @@
                 Height="34" 
                 Width="132"/>
     </Grid>
+-->
+    
+<!-- 
+    https://docs.microsoft.com/en-us/visualstudio/xaml-tools/how-to-create-and-apply-a-resource?view=vs-2019
+-->
+    <Page.Resources>
+        <Style x:Key="Style1" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Lucida Sans Unicode"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="FontSize" Value="21"/>
+            <Setter Property="Foreground" Value="Yellow"/>
+        </Style>
+        <Style x:Key="Style2" TargetType="Button">
+            <Setter Property="FontFamily" Value="Lucida Sans Unicode"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="HotPink"/>
+        </Style>
+    </Page.Resources>
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock x:Name="textBlock1" Text="TextBlock 1" TextWrapping="Wrap" Style="{StaticResource Style1}"/>
+        
+        <!-- Bind our x class variable on the cs page to the TextBlock -->
+        <TextBlock x:Name="textAppName" Text="{x:Bind _AppName, Mode=OneWay}" TextWrapping="Wrap"/>
+        <TextBlock x:Name="textAppVersion" Text="{x:Bind _AppVersion, Mode=OneWay}" TextWrapping="Wrap"/>
+        
+        <!-- Button click event will call & display results as message dialog-->
+        <Button x:Name="button" 
+                IsEnabled="True" 
+                Visibility="Visible" 
+                Content="App Version And Title" 
+                HorizontalAlignment="Left" 
+                Margin="120,98,0,510" 
+                VerticalAlignment="Stretch" 
+                Click="Button_Click" 
+                Height="34" 
+                Width="255"/>
+    </StackPanel>
 </Page>

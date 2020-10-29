@@ -20,6 +20,11 @@ namespace UWP
             this.InitializeComponent();
         }
 
+        // Auto set the Name & Version
+        public string _AppName = AppVersionAndTitle.AppName;
+        public string _AppVersion = AppVersionAndTitle.AppVersion;
+
+        // Set the Name & Version on click event
         public async void Button_Click(object sender, RoutedEventArgs e)
         {
             // String Format https://docs.microsoft.com/en-us/dotnet/api/system.string.format?view=netcore-3.1
