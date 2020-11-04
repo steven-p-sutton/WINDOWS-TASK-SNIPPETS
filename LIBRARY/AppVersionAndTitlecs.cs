@@ -6,11 +6,12 @@
 namespace WindowsTaskSnippets.AppVersionAndTitle
 {
    public static class AppVersionAndTitle
-    {
+   {
         public static string AppName
         {
             get { return Package.Current.Id.Name; }
         }
+
         public static string AppVersion
         {
             get
@@ -19,5 +20,5 @@ namespace WindowsTaskSnippets.AppVersionAndTitle
                 return $"{version.Major}.{version.Minor}.{version.Build}.{version.Revision}";
             }
         }
-    } 
+   } 
 }
