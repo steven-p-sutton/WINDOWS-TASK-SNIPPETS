@@ -38,7 +38,17 @@ namespace WindowsTaskSnippets.AppFiles
         Windows.Storage.StorageFile _File;
         Windows.Storage.StorageFolder _Folder;
         string _Name;
-        public string s;
+        string _s;
+
+        public string s
+        {
+            get{return _s;}
+            set{_s = value;}
+        }
+        public override string ToString()
+        {
+            return "Folder: " + _Folder + ", Name: " + _Name + ", s: " + _s;
+        }
 
         public AppFiles(string name)
         {
@@ -49,6 +59,7 @@ namespace WindowsTaskSnippets.AppFiles
         {
             _File = await _Folder.CreateFileAsync(_Name, Windows.Storage.CreationCollisionOption.OpenIfExists);
             await Windows.Storage.FileIO.WriteTextAsync(_File, s);
+            _s = s;
 
             // Append a list of strings, one per line, to the file
             //var listOfStrings = new List<string> { "line1", "line2", "line3" };
@@ -58,7 +69,7 @@ namespace WindowsTaskSnippets.AppFiles
         {
             //Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
             Windows.Storage.StorageFile _File = await _Folder.GetFileAsync(_Name);
-            s = await Windows.Storage.FileIO.ReadTextAsync(_File);
+            _s = await Windows.Storage.FileIO.ReadTextAsync(_File);
 
             // You can also read each line of the file into individual strings in a collection with 
             //IList<string> contents = await Windows.Storage.FileIO.ReadLinesAsync(_File);
