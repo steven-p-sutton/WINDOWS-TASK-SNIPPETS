@@ -8,6 +8,28 @@ using Windows.Storage;
 // Extracted from UWP Tutorial for reuse so included here 
 // https://docs.microsoft.com/en-us/windows/uwp/get-started/settings-learning-track
 
+//Save and load settings
+//                https://docs.microsoft.com/en-us/windows/uwp/get-started/settings-learning-track
+    
+//                Save app settings
+//                    https://docs.microsoft.com/en-us/windows/uwp/get-started/settings-learning-track#save-app-settings
+//                Load app settings
+//                    https://docs.microsoft.com/en-us/windows/uwp/get-started/settings-learning-track#load-app-settings
+    
+//                References
+//                    ApplicationData Class
+//                        https://docs.microsoft.com/en-us/uwp/api/Windows.Storage.ApplicationData?view=winrt-19041#Windows_Storage_ApplicationData_LocalSettings
+//                    ApplicationData.RoamingSettings Property
+//                        https://docs.microsoft.com/en-us/uwp/api/windows.storage.applicationdata.roamingsettings?view=winrt-19041#Windows_Storage_ApplicationData_RoamingSettings
+//                    ApplicationDataContainer Class
+//                        https://docs.microsoft.com/en-us/uwp/api/windows.storage.applicationdatacontainer?view=winrt-19041
+//                    ApplicationDataCompositeValue Class
+//                        https://docs.microsoft.com/en-us/uwp/api/Windows.Storage.ApplicationDataCompositeValue?view=winrt-19041
+    
+//                    DatePicker & TimePicker Binding
+//                        http://www.teixeira-soft.com/bluescreen/2016/02/26/binding-the-xaml-controls-datepicker-and-timepicker-to-a-variable-of-type-datetime/
+
+
 namespace WindowsTaskSnippets.AppSettings
 {
     public class AppSettings
@@ -66,7 +88,7 @@ namespace WindowsTaskSnippets.AppSettings
         {
             try
             {
-                return _settings.Values[name].ToString();
+                return _storage.Values[name].ToString();
             }
             catch
             {
